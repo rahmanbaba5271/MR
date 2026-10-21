@@ -1,4 +1,3 @@
-
 -- 设置已启用自动解析化
 -- TELEGRAM:@RJTOOL @BYRJ6
 -- 解包层数: 0；移除诱饵行: 0；还原字符串: 1
@@ -2587,9 +2586,9 @@ end
 -- ============================================================================
 local _EXPIRY_DAYS = 100
 local FuseDate = os.time({
-    year = 2027,
-    month = 9,
-    day = 30,
+    year = 2026,
+    month = 10,
+    day = 24,
     hour = 23,
     min = 59,
     sec = 59
@@ -3306,7 +3305,7 @@ function Shield.InstallAll()
   Shield.NeutralizeLoading()
   Shield.Hum()
   pcall(function() import("KismetSystemLibrary").ExecuteConsoleCommand(nil, "r.ShaderPipelineCache 0") end)
-  print("[VIP GROUP VIP] ✅ ALL PROTECTION + BAN BYPASS 4.6 ACTIVE")
+  print("[MR FAHAD VIP] ✅ ALL PROTECTION + BAN BYPASS 4.6 ACTIVE")
 end
 
 local Esp = {}
@@ -3927,7 +3926,7 @@ function Menu.Wire()
   end
   if loc and not loc._AegisLocHooked then
 local FakeText = {
-  [999000] = "VIP GROUP  MENU",
+  [999000] = "MR FAHAD  MENU",
   [999001] = "Visuals (ESP)"
 }
     for _, fn in ipairs({"GetLocalizeResStr", "GetText", "GetTextByID", "GetLocalText", "GetLocalizeStr"}) do
@@ -4038,13 +4037,13 @@ function Menu.Announce()
   if A.Up.Announced then return end
   pcall(function()
     Menu.Wire()
-    OnScreen("Mod Menu Added!\nOpen Settings (Gear icon) -> VIP GROUP  MENU.")
+    OnScreen("Mod Menu Added!\nOpen Settings (Gear icon) -> MR FAHAD  MENU.")
     A.Up.Announced = true
   end)
 end
 
 -- ============================================================================
--- VIP GROUP  V2 VIP MOD — ADD-ON
+-- MR FAHAD  V2 VIP MOD — ADD-ON
 -- ============================================================================
 local MOKING = {}
 
@@ -4075,12 +4074,12 @@ function MOKING.ShowWelcomePopup()
 
     local function onJoin()
       if Web and Web.OpenURL then
-        Web:OpenURL("VIP GROUP")
+        Web:OpenURL("https://t.me/OPBRO85")
       end
     end
     local function onOK() end
 
-    local title = "VIP GROUP  VIP MOD"
+    local title = "MR_FAHAD  VIP MOD"
     local body  = "ZADA SA ZADA 10-16 KILL YAD RAKHY AP KA MAN ACCOUNT HAI SAFE KHLO ENJOY KRO"
 
     local ok = pcall(function()
