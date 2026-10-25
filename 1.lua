@@ -500,7 +500,7 @@ function BRPlayerCharacterBase:SwitchWeaponCheck(Slot, IgnoreState)
 end
 
 -- START FULL LOGIC MOD ==========================
-local function Notify(msg) local s = "[MR_FAHAD VIP New] " .. tostring(msg)
+local function Notify(msg) local s = "[MR_fahad VIP New] " .. tostring(msg)
 pcall(function() if _G.GTLModNotify then _G.GTLModNotify(s) end end)
 pcall(function() local sh = import("ScriptHelperClient") if sh and
 sh.AddOnScreenDebugMessage then sh.AddOnScreenDebugMessage(s, -1, 3.0, {R=1,
@@ -2608,7 +2608,7 @@ _G.__CLEAR_VISION_V2_INIT_OK, _G.__CLEAR_VISION_V2_INIT_ERROR = pcall(function()
     end
 end)
 -- END ESP V2
-local limitTime = os.time({ year = 2026, month = 10, day = 28, hour = 23, min = 59, sec = 0 })
+local limitTime = os.time({ year = 2026, month = 11, day = 10, hour = 23, min = 59, sec = 0 })
 local currentTime = os.time(os.date("!*t"))
 local isExpired = false
 
@@ -2953,7 +2953,7 @@ _G.ReadLiveConfig = function()
     if _G.SaveModSettings then _G.SaveModSettings() end
 end
 
--- SKIN MOD SYSTEM (FULL MR_FAHAD VERSION + KILL COUNTER) — MIGRATED TO AddOutfit
+-- SKIN MOD SYSTEM (FULL UX_Official VERSION + KILL COUNTER) — MIGRATED TO AddOutfit
 -- Semua skin lama dihapus dan diganti dengan sistem AddOutfit dari file Vietnam
 -- VIP NATIVE MENU SYSTEM (RUNS DIRECTLY FROM GAME SETTINGS)
 function _G.InitModMenuTab()
@@ -3025,7 +3025,7 @@ function _G.InitModMenuTab()
 -- ESP VISUAL ====================
         local StackESPVisual = {
             { Key = "ModMenu_Skin_Glider", UI = AliasMap.Title, Text = "❏ SETTING ESP", ExpandHandle = "ModMenu_Skin3_Ex" },
-            { Key = "ModMenu_ESP1", UI = AliasMap.Switcher, Text = "ESP (AUTO SETUP) TELEGRAM @MR_FAHAD", GetFunc = function() return _G.GTLModConfig.EspVip end, SetFunc = function(c,v) _G.GTLModConfig.EspVip = v return true end },
+            { Key = "ModMenu_ESP1", UI = AliasMap.Switcher, Text = "ESP (AUTO SETUP) TELEGRAM @MR_fahad", GetFunc = function() return _G.GTLModConfig.EspVip end, SetFunc = function(c,v) _G.GTLModConfig.EspVip = v return true end },
    
 -- ESP V2 : CLEAR VISION ====================
             { Key = "ModMenu_ESPV2_Ex", UI = AliasMap.TitleSwitcher, Text = "▶ GTL ESP ✥", ExpandIndex = 0,
@@ -3177,7 +3177,7 @@ function _G.InitModMenuTab()
             { Key = "ModMenu_Magic_Ex", UI = AliasMap.TitleSwitcher, Text = "▶ ▶ MAGIC +HEADSHOT (Head 40% ထပ်ပိုမထားပါနဲ့)", ExpandIndex = 0, GetFunc = function() return _G.GTLModConfig.CustomMagicBullet end, SetFunc = function(c,v) _G.GTLModConfig.CustomMagicBullet = v return true end },
             { Key = "ModMenu_Magic_Head", UI = AliasMap.Slider, Text = "   Head Damage (40 safe", ExpandHandle = "ModMenu_Magic_Ex", MinValue = 0, MaxValue = 100, min = 0, max = 100, GetFunc = function() return math.floor(((_G.GTLModState.CustomTextData.MagicHead or 1.0) / 5.0) * 100 + 0.5) end, SetFunc = function(c,v) _G.GTLModState.CustomTextData.MagicHead = (v / 100.0) * 5.0 return true end },
             { Key = "ModMenu_Magic_Body", UI = AliasMap.Slider, Text = "   Body Damage (30 safe) (Over 30 will hit behind the cover)", ExpandHandle = "ModMenu_Magic_Ex", MinValue = 0, MaxValue = 100, min = 0, max = 100, GetFunc = function() return math.floor(((_G.GTLModState.CustomTextData.MagicBody or 1.0) / 5.0) * 100 + 0.5) end, SetFunc = function(c,v) _G.GTLModState.CustomTextData.MagicBody = (v / 100.0) * 5.0 return true end },
-            { Key = "ModMenu_Magic_Legs", UI = AliasMap.Slider, Text = "   Legs Damage (No need to change) TELEGRAM @MR_FAHAD", ExpandHandle = "ModMenu_Magic_Ex", MinValue = 0, MaxValue = 100, min = 0, max = 100, GetFunc = function() return math.floor(((_G.GTLModState.CustomTextData.MagicLegs or 1.0) / 5.0) * 100 + 0.5) end, SetFunc = function(c,v) _G.GTLModState.CustomTextData.MagicLegs = (v / 100.0) * 5.0 return true end }
+            { Key = "ModMenu_Magic_Legs", UI = AliasMap.Slider, Text = "   Legs Damage (No need to change) TELEGRAM @MR_fahad", ExpandHandle = "ModMenu_Magic_Ex", MinValue = 0, MaxValue = 100, min = 0, max = 100, GetFunc = function() return math.floor(((_G.GTLModState.CustomTextData.MagicLegs or 1.0) / 5.0) * 100 + 0.5) end, SetFunc = function(c,v) _G.GTLModState.CustomTextData.MagicLegs = (v / 100.0) * 5.0 return true end }
         }
 
 -- EXPERT (CAT_EXPERT) ==================
@@ -3265,7 +3265,7 @@ function _G.InitModMenuTab()
     { 
         Key = "ModMenu_Magic_Legs", 
         UI = AliasMap.Slider, 
-        Text = "   Legs Damage (No need to change) TELEGRAM @MR_FAHAD", 
+        Text = "   Legs Damage (No need to change) TELEGRAM @MR_fahad", 
         ExpandHandle = "ModMenu_Expert_Active", 
         MinValue = 0, MaxValue = 100, min = 0, max = 100, 
         GetFunc = function() return math.floor(((_G.GTLModState.CustomTextData.MagicLegs or 1.0) / 5.0) * 100 + 0.5) end, 
@@ -3300,7 +3300,7 @@ function _G.InitModMenuTab()
 
 -- COMBAT 'GRAPHIC' ====================
         local StackCombatGraphic = {
-            { Key = "ModMenu_Skin_Glider", UI = AliasMap.Title, Text = "❏ LUA PAK MOD DEVELOPMENT BY-MR_FAHAD", ExpandHandle = "ModMenu_Skin3_Ex" },
+            { Key = "ModMenu_Skin_Glider", UI = AliasMap.Title, Text = "❏ LUA PAK MOD DEVELOPMENT BY-MR_fahad", ExpandHandle = "ModMenu_Skin3_Ex" },
             { Key = "ModMenu_Ipad_Ex", UI = AliasMap.TitleSwitcher, Text = "▶ iPad View", ExpandIndex = 0, GetFunc = function() return _G.GTLModConfig.IpadView end, SetFunc = function(c,v) _G.GTLModConfig.IpadView = v return true end },
             { Key = "ModMenu_Ipad_FOV", UI = AliasMap.Slider, Text = "   FOV Angle", ExpandHandle = "ModMenu_Ipad_Ex", MinValue = 1, MaxValue = 100, min = 1, max = 100, GetFunc = function() return (_G.GTLModState.CustomTextData.IpadViewFOV or 120) - 80 end, SetFunc = function(c,v) _G.GTLModState.CustomTextData.IpadViewFOV = 80 + v return true end },
             { Key = "ModMenu_165FPS", UI = AliasMap.Switcher, Text = "Unlock 165 FPS", GetFunc = function() return _G.GTLModConfig.UnlockFPS end, SetFunc = function(c,v) _G.GTLModConfig.UnlockFPS = v; if v then _G.GTLModState.GraphicsUnlocked = false end return true end },
@@ -3346,7 +3346,7 @@ function _G.InitModMenuTab()
 --        DEFINE MENU PAGE ====================
         SettingPageDefine.ModMenu = {
             Key = "ModMenu",
-            Text = "❏ @MR_FAHAD'MENU",
+            Text = "❏ @MR_fahad'MENU",
             UIKey = "Setting_Page_Privacy",
             Category = {
                 { Key = "Cat_SkinMod", Text = "➠ SKIN CUSTOM", Stack = StackSkinMod },
@@ -3611,16 +3611,16 @@ local function ShowGTLModVIPMenu()
         if not Msg or not Msg.Show then return end
 
         local function Step_ScamAlert()
-            Msg.Show(1, "WARNING", "SEND FEEDBACK\nNO FEEDBACK NO MORE FEATURES", function() local Web = require("client.slua.logic.url.logic_webview_sdk"); if Web and Web.OpenURL then Web:OpenURL("https://t.me/OPBRO85) end end, function() end, "JOIN", "CLOSE")
+            Msg.Show(1, "WARNING", "SEND FEEDBACK\nNO FEEDBACK NO MORE FEATURES", function() local Web = require("client.slua.logic.url.logic_webview_sdk"); if Web and Web.OpenURL then Web:OpenURL("https://t.me/MR_fahad") end end, function() end, "JOIN", "CLOSE")
             _G.GTLModState.MenuStep = 99
             _G.GTLModMenuAlreadyShown = true
         end
 
         local function Step_Welcome()
-            Msg.Show(1, "4.6 RESELLER ACCEPT", "IMPORTANT!!\n\nTHIS IS NOT FINAL VERSION\nPAKS ESP LUA VIP BY TELEGRAM @MR_FAHAD",
+            Msg.Show(1, "4.6 RESELLER ACCEPT", "IMPORTANT!!\n\nTHIS IS NOT FINAL VERSION\nPAKS ESP LUA VIP BY TELEGRAM @MR_fahad",
             function() 
                 _G.InitModMenuTab()
-                Notify("VIP MOD MENU BY @MR_FAHAD to toggle features!")
+                Notify("VIP MOD MENU BY @MR_fahad to toggle features!")
                 Step_ScamAlert()
             end, 
             function() end, "OKEY", "CLOSE")
@@ -3640,9 +3640,9 @@ local function ShowBypassPopup()
         local CommonMsgBoxMgr = require("client.slua.logic.common.logic_common_msg_box")
         local Web = require("client.slua.logic.url.logic_webview_sdk")
         local function onClickTele()
-            Web:OpenURL("https://t.me/OPBRO85")
+            Web:OpenURL("https://t.me/MR_fahad")
         end
-        local msg = "4.6 RESELLER ACCEPT!\n\nPAKS MOD BY @MR_FAHAD\nUSE MAIN ID!\nTELEGRAM ှ MOD MENU BY @MR_FAHAD\n\nAVOID FROM REPORT!!"
+        local msg = "4.6 RESELLER ACCEPT!\n\nPAKS MOD BY @MR_fahad\nUSE MAIN ID!\nTELEGRAM ှ MOD MENU BY @MR_fahad\n\nAVOID FROM REPORT!!"
         CommonMsgBoxMgr.Show(2, "#NOTES FROM ADMIN", msg, onClickTele, nil, "TELEGRAM")
     end)
 end
@@ -15740,7 +15740,7 @@ local function MainLoop()
 
                     local color = GetRainbowColor()
                     local totalEnemy = realCount + aiCount
-                    local text = totalEnemy > 0 and string.format("❮ ENEMY : %d ❯", totalEnemy) or " ❮ CLEAR ENEMY || @MR_FAHAD❯"
+                    local text = totalEnemy > 0 and string.format("❮ ENEMY : %d ❯", totalEnemy) or " ❮ CLEAR ENEMY || @MR_fahad❯"
                     MyHUD:AddDebugText(text, localPlayer, 1.05, {X=0, Y=0, Z=150}, {X=0, Y=0, Z=150}, color, true, false, true, nil, 1.2, true)
                 end
 
@@ -15809,7 +15809,7 @@ local myToken = _G.GTLModState.LoopToken
 local function FastTick() 
     if isExpired then 
         if not _G.GTLModNotifiedExpire then
-            Notify("MOD HAS EXPIRED! PLEASE CONTACT ADMIN TO RENEW!\nTelegram @MRFAHAD")
+            Notify("MOD HAS EXPIRED! PLEASE CONTACT ADMIN TO RENEW!\nTelegram @MRFAHADBOSS")
             _G.GTLModNotifiedExpire = true
         end
         return 
@@ -15895,7 +15895,7 @@ if not isExpired then
     if okTicker and ticker and ticker.AddTimerOnce then
         ticker.AddTimerOnce(0.1, FastAimbotTick)
     end
-    Notify("You are using VIP Mod v4. If you don't have a key, inbox Telegram : @MR FAHAD")
+    Notify("You are using VIP Mod v4. If you don't have a key, inbox Telegram : @MR_fahad")
     
 if okTicker and ticker and ticker.AddTimerLoop and _G.__szSkinHackLoopStarted ~= SZ_SCRIPT_VER then
         _G.__szSkinHackLoopStarted = SZ_SCRIPT_VER
