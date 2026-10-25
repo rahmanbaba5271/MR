@@ -2953,7 +2953,7 @@ _G.ReadLiveConfig = function()
     if _G.SaveModSettings then _G.SaveModSettings() end
 end
 
--- SKIN MOD SYSTEM (FULL MR_FAHAD VERSION + KILL COUNTER) — MIGRATED TO AddOutfit
+-- SKIN MOD SYSTEM (FULL UX_Official VERSION + KILL COUNTER) — MIGRATED TO AddOutfit
 -- Semua skin lama dihapus dan diganti dengan sistem AddOutfit dari file Vietnam
 -- VIP NATIVE MENU SYSTEM (RUNS DIRECTLY FROM GAME SETTINGS)
 function _G.InitModMenuTab()
